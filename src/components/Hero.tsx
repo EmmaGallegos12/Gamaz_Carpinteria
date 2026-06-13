@@ -1,38 +1,73 @@
 export default function Hero() {
   return (
-    <section className="min-h-[80vh] flex items-center">
+    <section className="relative min-h-[85vh] flex items-center bg-stone-50 overflow-hidden">
+      {/* Decorative background element for warmth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200 opacity-50"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        
+        {/* Text Content */}
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200/80 text-stone-700 text-sm font-medium mb-6">
+            <span className="w-2 h-2 rounded-full bg-amber-700"></span>
+            Carpintería Fina y Muebles a Medida
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-stone-900 mb-6 leading-tight">
+            Diseño en madera, <br/>
+            <span className="text-amber-900">hecho para durar.</span>
+          </h1>
+          
+          <p className="text-xl text-stone-600 mb-10 leading-relaxed">
+            Transformamos tus espacios con piezas artesanales de alta calidad. Desde cocinas integrales hasta mobiliario premium, diseñados y fabricados a tu medida.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://wa.me/TUNUMERO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center bg-stone-900 text-stone-50 px-8 py-4 rounded-xl text-lg font-medium hover:bg-amber-900 transition-all shadow-md hover:shadow-lg"
+            >
+              Solicitar cotización por WhatsApp
+            </a>
+            <a
+              href="#proyectos"
+              className="inline-flex justify-center items-center bg-transparent border-2 border-stone-300 text-stone-700 px-8 py-4 rounded-xl text-lg font-medium hover:border-stone-900 hover:text-stone-900 transition-colors"
+            >
+              Ver nuestros trabajos
+            </a>
+          </div>
 
-      <div className="max-w-7xl mx-auto px-6">
+          {/* Trust Indicators */}
+          <div className="mt-12 flex items-center gap-6 pt-8 border-t border-stone-200">
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-stone-900">15+</span>
+              <span className="text-sm text-stone-600 font-medium">Años de experiencia</span>
+            </div>
+            <div className="w-px h-12 bg-stone-300"></div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-stone-900">100%</span>
+              <span className="text-sm text-stone-600 font-medium">Calidad artesanal</span>
+            </div>
+          </div>
+        </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          Muebles hechos para durar.
-        </h1>
-
-        <p className="text-xl text-gray-600 max-w-2xl mb-8">
-          Diseñamos y fabricamos muebles funcionales
-          para hogares, oficinas y espacios profesionales.
-        </p>
-
-        <div className="flex gap-4 flex-wrap">
-
-          <a
-            href="https://wa.me/TUNUMERO"
-            className="bg-black text-white px-8 py-4 rounded-lg"
-          >
-            Solicitar cotización
-          </a>
-
-          <a
-            href="#proyectos"
-            className="border px-8 py-4 rounded-lg"
-          >
-            Ver proyectos
-          </a>
-
+        {/* Visual Content (Image Placeholder) */}
+        <div className="relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
+          {/* Main Image Placeholder */}
+          <div className="absolute inset-0 bg-stone-300">
+            {/* 
+              TODO: Add Next/Image here when the actual image asset is available.
+              Suggested image: A high-quality photo of a finished wooden kitchen or a close-up of premium woodworking details.
+            */}
+          </div>
+          
+          {/* Overlay gradient for depth */}
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent"></div>
         </div>
 
       </div>
-
     </section>
   );
 }
