@@ -1,19 +1,25 @@
+import Image from "next/image";
+import { getWhatsAppLink } from "@/config";
+
 export default function Projects() {
   const projects = [
     {
       title: "Cocinas de Autor",
       category: "Residencial",
       description: "Espacios culinarios diseñados a medida con maderas tratadas y acabados en mate.",
+      image: "/images/project_kitchen.jpg",
     },
     {
       title: "Clóset Boutique",
       category: "Interiores",
       description: "Vestidor abierto con iluminación LED integrada y divisiones personalizadas.",
+      image: "/images/project_closet.jpg",
     },
     {
       title: "Mesa de Nogal",
       category: "Mobiliario",
       description: "Comedor artesanal para 8 personas tallado en madera sólida de nogal.",
+      image: "/images/project_table.jpg",
     }
   ];
 
@@ -32,7 +38,7 @@ export default function Projects() {
             </h3>
           </div>
           <a
-            href="https://wa.me/TUNUMERO"
+            href={getWhatsAppLink("Hola, vi su proyecto de Cocinas/Mesa/Clósets y me gustaría cotizar algo similar.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-stone-600 font-medium hover:text-amber-900 transition-colors"
@@ -49,12 +55,13 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={index} className="group cursor-pointer">
               {/* Image Container */}
-              <div className="relative bg-stone-200 aspect-[4/5] rounded-2xl mb-6 overflow-hidden shadow-sm group-hover:shadow-xl transition-all duration-500">
-                {/* 
-                  TODO: Replace with actual Next/Image 
-                  Suggested: High resolution, professional photography of the final product.
-                */}
-                <div className="absolute inset-0 bg-stone-300 transform group-hover:scale-105 transition-transform duration-700 ease-out"></div>
+              <div className="relative bg-stone-200 aspect-[3/4] rounded-2xl mb-6 overflow-hidden shadow-sm group-hover:shadow-xl transition-all duration-500">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
                 
                 {/* Subtle dark overlay that appears on hover */}
                 <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors duration-500"></div>

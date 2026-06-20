@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getWhatsAppLink } from "@/config";
 
 export default function Navbar() {
   return (
@@ -19,7 +20,7 @@ export default function Navbar() {
         {/* Primary CTA */}
         <div className="flex items-center gap-4">
           <a 
-            href="https://wa.me/TUNUMERO" 
+            href={getWhatsAppLink()} 
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex bg-stone-900 text-stone-50 px-6 py-2.5 rounded-lg font-medium hover:bg-amber-900 transition-all shadow-sm"
@@ -29,7 +30,7 @@ export default function Navbar() {
           
           {/* Mobile Menu Button & Mobile CTA */}
           <a 
-            href="https://wa.me/TUNUMERO" 
+            href={getWhatsAppLink()} 
             target="_blank"
             rel="noopener noreferrer"
             className="md:hidden flex items-center justify-center bg-stone-900 text-stone-50 px-4 py-2 rounded-lg font-medium hover:bg-amber-900 transition-colors text-sm"

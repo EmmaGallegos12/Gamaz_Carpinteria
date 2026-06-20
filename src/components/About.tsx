@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="nosotros" className="py-32 bg-white overflow-hidden">
@@ -7,8 +9,12 @@ export default function About() {
         <div className="relative order-2 lg:order-1">
           {/* Main Image */}
           <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-2xl z-10">
-            {/* TODO: Add Next/Image with a photo of the workshop or craftsmen working */}
-            <div className="absolute inset-0 bg-stone-200"></div>
+            <Image
+              src="/images/about_workshop.jpg"
+              alt="Artesano de GAMAZ Carpintería trabajando en madera en el taller"
+              fill
+              className="object-cover"
+            />
           </div>
           
           {/* Decorative Background Box */}

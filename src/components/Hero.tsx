@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { getWhatsAppLink } from "@/config";
+
 export default function Hero() {
   return (
     <section className="relative min-h-[85vh] flex items-center bg-stone-50 overflow-hidden">
@@ -24,7 +27,7 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://wa.me/TUNUMERO"
+              href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center items-center bg-stone-900 text-stone-50 px-8 py-4 rounded-xl text-lg font-medium hover:bg-amber-900 transition-all shadow-md hover:shadow-lg"
@@ -53,16 +56,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Visual Content (Image Placeholder) */}
+        {/* Visual Content (Image) */}
         <div className="relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
-          {/* Main Image Placeholder */}
-          <div className="absolute inset-0 bg-stone-300">
-            {/* 
-              TODO: Add Next/Image here when the actual image asset is available.
-              Suggested image: A high-quality photo of a finished wooden kitchen or a close-up of premium woodworking details.
-            */}
-          </div>
-          
+          <Image
+            src="/images/hero_woodworking.jpg"
+            alt="Cocina de diseño artesanal en madera de nogal por GAMAZ Carpintería"
+            fill
+            className="object-cover"
+            priority
+          />
           {/* Overlay gradient for depth */}
           <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent"></div>
         </div>

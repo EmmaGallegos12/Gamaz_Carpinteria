@@ -1,3 +1,5 @@
+import { getWhatsAppLink } from "@/config";
+
 export default function CTA() {
   return (
     <section className="py-24 bg-stone-900 text-stone-50 text-center">
@@ -9,7 +11,7 @@ export default function CTA() {
           Contáctanos hoy mismo y comencemos a trabajar en ese mueble o espacio que siempre has imaginado.
         </p>
         <a 
-          href="https://wa.me/TUNUMERO" 
+          href={getWhatsAppLink()} 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-stone-900 font-semibold px-8 py-4 rounded-lg hover:bg-stone-200 transition-colors"

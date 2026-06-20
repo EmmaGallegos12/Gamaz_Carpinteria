@@ -1,3 +1,5 @@
+import { getWhatsAppLink } from "@/config";
+
 export default function Services() {
   const services = [
     {
@@ -72,7 +74,7 @@ export default function Services() {
         <div className="mt-16 text-center">
           <p className="text-stone-600 mb-4">¿Tienes una idea diferente en mente?</p>
           <a
-            href="https://wa.me/TUNUMERO"
+            href={getWhatsAppLink("Hola, tengo una idea diferente para un proyecto de carpintería y me gustaría platicarla.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-amber-900 font-semibold hover:text-stone-900 transition-colors"
